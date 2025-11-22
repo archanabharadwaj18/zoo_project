@@ -1,0 +1,98 @@
+<html>
+<head>
+    <title>ZOO</title>
+    <style>
+        body {
+            background-color: lightgreen;
+            color: darkgreen;
+            font-family: Arial, Helvetica, sans-serif;
+            border: 10px double brown;
+            text-align: center;
+        }
+
+        h1 {
+            color: brown;
+        }
+
+        .animal-list {
+
+            counter-reset: animal-counter; 
+            display: flex;
+            flex-direction: column;  
+            align-items: center;     
+            margin-top: 30px;
+            gap: 15px;               
+        }
+
+        .animal-box {
+            counter-increment: animal-counter;
+            position: relative;
+            background-color: white;
+            border: 3px solid brown;
+            padding: 15px;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .animal-box::before {
+            content: counter(animal-counter) ". ";
+            font-weight: bold;
+            color: brown;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+}
+
+
+        .animal-box a {
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        .animal-box a:hover {
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Zoo</h1>
+    <p>THE GREAT MYSORE ZOO OF INDIA WITH 300+ ANIMALS!</p>
+
+    <div>
+        <img 
+            width="600px"
+            height="300px"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMfukV8TutV3m6mnpdK3M4s7d-8stIrDli1Q&s"
+            alt="Zoo Image"
+        />
+    </div>
+
+    <div class="animal-list">
+        <div class="animal-box">
+            <p>Tiger</p>
+            <a href="/tiger">More about Tiger</a>
+        </div>
+
+        <div class="animal-box">
+            <p>Lion</p>
+            <a href="/lion">More about Lion</a>
+        </div>
+
+        <div class="animal-box">
+            <p>Monkey</p>
+            <a href="/monkey">More about Monkey</a>
+        </div>
+
+        <div class="animal-box">
+            <p>Snakes</p>
+            <a href="/snakes">More about Snakes</a>
+        </div>
+
+        <div class="animal-box">
+            <p>Birds</p>
+            <a href="/birds">More about Birds</a>
+        </div>
+    </div>
+</body>
+</html>
